@@ -4,13 +4,14 @@ import com.hacka.company.Domain.Company;
 import jakarta.persistence.*;
 import lombok.*;
 
-
+@Table(name = "app_user")
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

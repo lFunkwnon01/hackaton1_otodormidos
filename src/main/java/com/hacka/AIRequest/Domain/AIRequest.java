@@ -11,13 +11,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "ai_request")
-@Setter
-@Getter
-@ToString
-@RequiredArgsConstructor// Esta anotación de Lombok incluye getters, setters, toString, etc.
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
+@Data
 public class AIRequest {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
