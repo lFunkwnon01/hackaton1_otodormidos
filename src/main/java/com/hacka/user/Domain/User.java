@@ -6,6 +6,7 @@ import lombok.*;
 
 
 @Entity
+@Table(name = "api_user")
 @Getter
 @Setter
 @NoArgsConstructor
