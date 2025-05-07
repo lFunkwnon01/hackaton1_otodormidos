@@ -107,10 +107,8 @@ class AIManager {
         }
     }
 
-    // ... (métodos compareModels y demás permanecen igual)
 }
 
-// Ejemplo de uso multimodal
 (async () => {
     const aiManager = new AIManager();
 

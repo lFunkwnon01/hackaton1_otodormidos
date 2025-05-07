@@ -13,16 +13,15 @@ import java.util.List;
 @Service
 public class AIRequestService {
 
-    @Value("${ai.provider.endpoint}")  // Ej: "https://api.openai.com/v1/chat/completions"
+    @Value("${ai.provider.endpoint}")
     private String endpoint;
 
-    @Value("${ai.provider.api-key}")  // Tu API key
+    @Value("${ai.provider.api-key}")
     private String apiKey;
 
     private final AIRequestRepository aiRequestRepository;
     private final RestTemplate restTemplate;
 
-    // Modelos soportados (ajusta según tu necesidad)
     private static final List<String> SUPPORTED_MODELS = Arrays.asList(
             "gpt-4",
             "gpt-3.5-turbo",
@@ -59,13 +58,11 @@ public class AIRequestService {
         headers.setContentType(MediaType.APPLICATION_JSON);
         headers.set("Authorization", "Bearer " + apiKey);
 
-        // Cuerpo de la solicitud (formato compatible con OpenAI)
         String requestBody = String.format(
                 "{\"model\": \"%s\", \"messages\": [{\"role\": \"user\", \"content\": \"%s\"}]}",
                 modelId, prompt
         );
 
-        // Envío de la solicitud HTTP
         HttpEntity<String> entity = new HttpEntity<>(requestBody, headers);
         ResponseEntity<String> response = restTemplate.exchange(
                 endpoint,
@@ -74,7 +71,6 @@ public class AIRequestService {
                 String.class
         );
 
-        // Procesamiento básico de la respuesta (ajusta según la estructura de tu proveedor)
         return response.getBody();
     }
 
@@ -85,16 +81,16 @@ public class AIRequestService {
     }
 
     private Integer calculateTokens(String text) {
-        return text != null ? text.length() / 4 : 0;  // Estimación simple
+        return text != null ? text.length() / 4 : 0;
     }
 
     // Métodos para consultas históricas
     public List<AIRequest> getRequestsByUser(Long userId) {
-        return aiRequestRepository.findByUserId(userId);  // Ajustado al repositorio corregido
+        return aiRequestRepository.findByUserId(userId);
     }
 
     public List<AIRequest> getRequestsByCompany(Long companyId) {
-        return aiRequestRepository.findByCompanyId(companyId);  // Ajustado al repositorio corregido
+        return aiRequestRepository.findByCompanyId(companyId);
     }
 
     public AIRequest saveRequest(AIRequest aiRequest) {

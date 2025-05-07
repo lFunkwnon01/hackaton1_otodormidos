@@ -17,19 +17,19 @@ public class AIRequest {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String modelId;  // ID del modelo (ej: "openai/gpt-4.1")
-    private String prompt;   // Texto de la consulta
+    private String modelId;
+    private String prompt;
 
     @Column(length = 2000)
-    private String response; // Respuesta del modelo
+    private String response;
 
-    private String status = "PENDING"; // PENDING, COMPLETED, FAILED
+    private String status = "PENDING";
 
     private Integer tokensConsumidos;
     private LocalDateTime fechaHora;
-    private String nombreArchivo; // Para multimodal
+    private String nombreArchivo;
 
-    private String modeloUtilizado; // Nombre legible del modelo
+    private String modeloUtilizado;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
