@@ -3,8 +3,7 @@ package com.hacka.AIRequest.Domain;
 import com.hacka.company.Domain.Company;
 import com.hacka.user.Domain.User;
 import jakarta.persistence.*;
-
-import lombok.*;
+import lombok.Data;
 import org.hibernate.proxy.HibernateProxy;
 
 import java.time.LocalDateTime;
@@ -18,18 +17,19 @@ public class AIRequest {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String consulta; // Texto de la consulta
+    private String modelId;  // ID del modelo (ej: "openai/gpt-4.1")
+    private String prompt;   // Texto de la consulta
 
     @Column(length = 2000)
-    private String respuesta; // Respuesta obtenida (texto o error)
+    private String response; // Respuesta del modelo
+
+    private String status = "PENDING"; // PENDING, COMPLETED, FAILED
 
     private Integer tokensConsumidos;
-
     private LocalDateTime fechaHora;
+    private String nombreArchivo; // Para multimodal
 
-    private String nombreArchivo; // Si es multimodal
-
-    private String modeloUtilizado;
+    private String modeloUtilizado; // Nombre legible del modelo
 
     @ManyToOne
     @JoinColumn(name = "user_id")
