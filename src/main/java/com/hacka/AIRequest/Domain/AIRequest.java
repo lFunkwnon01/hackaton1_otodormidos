@@ -1,7 +1,7 @@
 package com.hacka.AIRequest.Domain;
 
-import com.hacka.company.Domain.Company;
-import com.hacka.user.Domain.User;
+import com.hacka.company.domain.Company;
+import com.hacka.user.domain.User;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.hibernate.proxy.HibernateProxy;
