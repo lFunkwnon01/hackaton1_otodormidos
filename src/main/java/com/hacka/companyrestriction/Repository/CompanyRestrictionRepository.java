@@ -1,7 +1,7 @@
-package com.hacka.CompanyRestriction.Repository;
+package com.hacka.companyrestriction.Repository;
 
 
-import com.hacka.CompanyRestriction.Domain.CompanyRestriction;
+import com.hacka.companyrestriction.Domain.CompanyRestriction;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

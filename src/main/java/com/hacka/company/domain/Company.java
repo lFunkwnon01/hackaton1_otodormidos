@@ -1,4 +1,4 @@
-package com.hacka.company.Domain;
+package com.hacka.company.domain;
 
 import jakarta.persistence.*;
 import lombok.*;

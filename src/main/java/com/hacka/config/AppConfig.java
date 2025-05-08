@@ -1,4 +1,4 @@
-package com.hacka.Config;
+package com.hacka.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

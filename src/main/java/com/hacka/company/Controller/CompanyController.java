@@ -1,8 +1,8 @@
 package com.hacka.company.Controller;
 
 
-import com.hacka.company.Domain.Company;
-import com.hacka.company.Domain.CompanyService;
+import com.hacka.company.domain.Company;
+import com.hacka.company.domain.CompanyService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

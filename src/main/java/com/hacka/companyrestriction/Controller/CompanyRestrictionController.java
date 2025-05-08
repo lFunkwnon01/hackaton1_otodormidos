@@ -1,8 +1,8 @@
-package com.hacka.CompanyRestriction.Controller;
+package com.hacka.companyrestriction.Controller;
 
 
-import com.hacka.CompanyRestriction.Domain.CompanyRestriction;
-import com.hacka.CompanyRestriction.Domain.CompanyRestrictionService;
+import com.hacka.companyrestriction.Domain.CompanyRestriction;
+import com.hacka.companyrestriction.Domain.CompanyRestrictionService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

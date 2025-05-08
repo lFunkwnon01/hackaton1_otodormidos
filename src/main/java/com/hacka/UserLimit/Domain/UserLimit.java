@@ -1,6 +1,6 @@
 package com.hacka.UserLimit.Domain;
 
-import com.hacka.user.Domain.User;
+import com.hacka.user.domain.User;
 import jakarta.persistence.Entity;
 
 import jakarta.persistence.*;

@@ -1,4 +1,4 @@
-package com.hacka.user.Domain;
+package com.hacka.user.domain;
 
 public enum Role {
 

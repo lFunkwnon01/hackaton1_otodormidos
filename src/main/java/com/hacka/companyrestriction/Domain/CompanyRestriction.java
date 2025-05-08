@@ -1,6 +1,6 @@
-package com.hacka.CompanyRestriction.Domain;
+package com.hacka.companyrestriction.Domain;
 
-import com.hacka.company.Domain.Company;
+import com.hacka.company.domain.Company;
 import jakarta.persistence.*;
 import lombok.*;
 

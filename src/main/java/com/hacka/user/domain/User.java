@@ -1,6 +1,6 @@
-package com.hacka.user.Domain;
+package com.hacka.user.domain;
 
-import com.hacka.company.Domain.Company;
+import com.hacka.company.domain.Company;
 import jakarta.persistence.*;
 import lombok.*;
 

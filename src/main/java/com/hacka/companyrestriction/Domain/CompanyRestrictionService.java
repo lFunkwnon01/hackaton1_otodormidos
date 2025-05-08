@@ -1,7 +1,7 @@
-package com.hacka.CompanyRestriction.Domain;
+package com.hacka.companyrestriction.Domain;
 
 
-import com.hacka.CompanyRestriction.Repository.CompanyRestrictionRepository;
+import com.hacka.companyrestriction.Repository.CompanyRestrictionRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

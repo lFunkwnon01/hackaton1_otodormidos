@@ -1,6 +1,6 @@
-package com.hacka.user.Repository;
+package com.hacka.user.repository;
 
-import com.hacka.user.Domain.User;
+import com.hacka.user.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

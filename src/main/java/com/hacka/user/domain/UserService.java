@@ -1,7 +1,7 @@
-package com.hacka.user.Domain;
+package com.hacka.user.domain;
 
 
-import com.hacka.user.Repository.UserRepository;
+import com.hacka.user.repository.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
