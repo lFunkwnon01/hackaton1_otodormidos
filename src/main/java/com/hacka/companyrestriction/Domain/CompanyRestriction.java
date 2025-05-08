@@ -1,18 +1,12 @@
-package com.hacka.UserLimit.Domain;
+package com.hacka.companyrestriction.Domain;
 
-import com.hacka.user.domain.User;
-import jakarta.persistence.Entity;
-
+import com.hacka.company.domain.Company;
 import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
-public class UserLimit {
+@Data
+public class CompanyRestriction {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -26,6 +20,6 @@ public class UserLimit {
     private String ventanaTiempo; // Ej: diario, semanal
 
     @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user;
+    @JoinColumn(name = "company_id")
+    private Company company;
 }

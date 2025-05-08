@@ -1,8 +1,8 @@
 package com.hacka.user.Controller;
 
 
-import com.hacka.user.Domain.User;
-import com.hacka.user.Domain.UserService;
+import com.hacka.user.domain.User;
+import com.hacka.user.domain.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
